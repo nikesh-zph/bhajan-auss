@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+	--spiritual-1: #a95718;
+	--spiritual-2: #ffdc91;
+	--spiritual-3: #f3e0c2;
+}
+
+@layer base {
+	html, body, #root {
+		height: 100%;
+	}
+
+	body {
+		font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+		background-color: #fffaf1;
+		color: #402919;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.font-serif {
+		font-family: 'Noto Serif Devanagari', 'Merriweather', Georgia, 'Times New Roman', serif;
+	}
+
+	h1, h2, h3, h4 {
+		letter-spacing: -0.01em;
+	}
+}
+
+/* small utility for soft cards */
+.soft-card {
+	background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(243,224,194,0.6));
+	border: 1px solid rgba(234,217,186,0.6);
+}
+
+/* Site-wide soft transparent background pattern */
+.bg-site-pattern {
+	background-image: linear-gradient(rgba(255,250,241,0.72), rgba(255,250,241,0.72)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD_cv615OihmSC8FniytyDZnvueXJWrvwiaqPWIXxp3HIM-30KPvb7cV4&s');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/* For content areas that need a subtler overlay */
+.bg-site-pattern-soft {
+	background-image: linear-gradient(rgba(255,250,241,0.9), rgba(255,250,241,0.9)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD_cv615OihmSC8FniytyDZnvueXJWrvwiaqPWIXxp3HIM-30KPvb7cV4&s');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
