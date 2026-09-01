@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import {
   CalendarDays,
   CheckCircle2,
@@ -44,7 +44,7 @@ export default function EventRegistration() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formData.agreeTerms) {
@@ -124,6 +124,7 @@ export default function EventRegistration() {
   return (
     <div className="min-h-screen bg-[#fffaf5] px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
+
         {/* HEADER */}
         <div className="mb-7 text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-200">
@@ -194,6 +195,7 @@ export default function EventRegistration() {
           </div>
 
           <div className="p-6 sm:p-8 lg:p-10">
+
             {/* SECTION 1 */}
             <FormSection
               number="01"
@@ -401,7 +403,9 @@ export default function EventRegistration() {
                   className="text-green-600"
                 />
 
-                <span>Your information is securely submitted.</span>
+                <span>
+                  Your information is securely submitted.
+                </span>
               </div>
 
               <button
@@ -479,8 +483,11 @@ function InputField({
     <div>
       <label className="mb-2 block text-sm font-bold text-[#741b18]">
         {label}
+
         {required && (
-          <span className="ml-1 text-orange-500">*</span>
+          <span className="ml-1 text-orange-500">
+            *
+          </span>
         )}
       </label>
 
@@ -532,8 +539,11 @@ function SelectField({
     <div>
       <label className="mb-2 block text-sm font-bold text-[#741b18]">
         {label}
+
         {required && (
-          <span className="ml-1 text-orange-500">*</span>
+          <span className="ml-1 text-orange-500">
+            *
+          </span>
         )}
       </label>
 

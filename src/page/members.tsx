@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Music2, Mic2, Drum, Sparkles, Guitar } from "lucide-react";
@@ -125,50 +125,10 @@ const artists: Artist[] = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.55,
-      ease: [0.33, 0.1, 0.3, 1],
-    },
-  },
-};
+// motion variants removed — simplified static grid
 
 export default function Artists() {
-  const [search, setSearch] = useState("");
-  const [roleFilter, setRoleFilter] = useState("All");
-  const [expanded, setExpanded] = useState<number | null>(null);
-
-  const roles = ["All", ...Array.from(new Set(artists.map((a) => a.role)))];
-
-  const filtered = artists.filter((a) => {
-    const q = search.toLowerCase().trim();
-    if (!q && roleFilter === "All") return true;
-
-    const matchesSearch =
-      a.name.toLowerCase().includes(q) ||
-      a.description.toLowerCase().includes(q) ||
-      (a.instruments || []).join(" ").toLowerCase().includes(q);
-
-    const matchesRole = roleFilter === "All" || a.role === roleFilter;
-
-    return matchesSearch && matchesRole;
-  });
+  // Simplified artists page — static grid; interactive search/filter removed
 
   return (
     <main className="min-h-screen bg-[#fffaf1]">

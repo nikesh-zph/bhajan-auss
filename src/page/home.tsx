@@ -470,32 +470,4 @@ function SectionHeading({
   );
 }
 
-function FooterColumn({
-  title,
-  links,
-}: {
-  title: string;
-  links: [string, string][];
-}) {
-  return (
-    <div>
-      <h3 className="font-semibold uppercase tracking-[0.12em] text-slate-300">
-        {title}
-      </h3>
 
-      <ul className="mt-5 space-y-3">
-        {links.map(([label, path]) => (
-          <li key={path}>
-            <Link
-              to={path}
-              className="inline-flex items-center gap-2 text-sm transition hover:text-orange-400"
-            >
-              <ChevronRight size={14} className="text-orange-500" />
-              {label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
